@@ -10,9 +10,8 @@ from fastapi import APIRouter, FastAPI, Request, Response
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.openapi.docs import get_swagger_ui_html, get_swagger_ui_oauth2_redirect_html
 from fastapi.staticfiles import StaticFiles
+from src.apps.http.manager import ServerManager
 from src.apps.http.settings import descriiption, settings, version
-
-from apps.http.manager import ServerManager
 
 
 @asynccontextmanager
