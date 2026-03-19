@@ -7,6 +7,7 @@ requires-python = ">=3.13"
 
 dependencies = [
     "asyncpg>=0.31.0",
+    "mypy>=1.19.1",
     "pydantic>=2.12.5",
     "pydantic-settings>=2.13.1",
     "redis>=7.3.0",
@@ -32,3 +33,6 @@ python_version = "3.13"
 files = ["src"]
 ignore_missing_imports = true
 plugins = ["pydantic.mypy"]
+exclude = [
+    'src/.*/settings.py',
+]
