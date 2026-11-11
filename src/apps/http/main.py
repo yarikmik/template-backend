@@ -15,7 +15,7 @@ from src.apps.http.settings import descriiption, settings, version
 
 
 @asynccontextmanager
-async def _lifespan(_app: FastAPI) -> tp.AsyncIterator[None]:
+async def _lifespan(_app: FastAPI) -> tp.AsyncGenerator[None, None]:
     print('Lifespan calls')
     yield
 
